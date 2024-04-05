@@ -32,7 +32,7 @@ export function MonumentDetails(props : MonumentDetailsProps ) {
                 </CardContent>
                 {monument.hasImage && 
                 <CardActions>
-                    <Button size="small" onClick={onImageLinkClick}>Ver imagen</Button>
+                    <Button size="small" variant='contained' onClick={onImageLinkClick}>Ver imagen</Button>
                 </CardActions>}
             </Card>
             {monument.hasImage && <MonumentImageDialog isOpen={imageOpen} onClose={onClose} monument={monument} />}

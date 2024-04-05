@@ -14,3 +14,24 @@ export const ALICANTE = 'Alicante'
 export const TOLEDO = 'Toledo'
 export const VALLADOLID = 'Valladolid'
 export const SANTANDER = 'Santander'
+
+
+
+export const CITIES = {
+    SALAMANCA: 'Salamanca', 
+    MADRID: 'Madrid', 
+    BARCELONA: 'Barcelona', 
+    VALENCIA: 'Valencia', 
+    SEVILLA: 'Sevilla', 
+    MALAGA: 'Malaga', 
+    BILBAO: 'Bilbao', 
+    GRANADA: 'Granada', 
+    ZARAGOZA: 'Zaragoza', 
+    MURCIA: 'Murcia', 
+    PALMA: 'Palma', 
+    CADIZ: 'Cadiz', 
+    ALICANTE: 'Alicante', 
+    TOLEDO: 'Toledo', 
+    VALLADOLID: 'Valladolid', 
+    SANTANDER: 'Santander'
+}

@@ -1,30 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Monument } from '../Utils/types'
 import { MonumentDetails } from './MonumentDetails';
-import { RETRIEVE_MONUMENTS } from '../Utils/Urls';
-import { SALAMANCA } from '../Utils/consts';
+
 import { CircularProgress, Container, Box } from '@mui/material';
+import { useListMonuments } from '../hooks/useListMonuments';
+import { CITIES } from '../Utils/consts';
 
 export function MonumentsList() {
 
-    const [lista, setLista] = useState<Monument[] | null>(null);
-    const [isLoading, setIsLoading] = useState<boolean>(true);
-  
-  useEffect(() => {
+    const CITY_TO_USE = CITIES.SALAMANCA
 
-    if(lista) {
-        return
-    }
-
-    fetch(RETRIEVE_MONUMENTS + SALAMANCA)
-    .then((response) => {
-        response.json()
-            .then((monuments: Monument[]) => {
-            setLista(monuments);
-            setIsLoading(false);
-        });
-    });
-  }, [lista]);
+    const {isLoading, lista} = useListMonuments({CITY_TO_USE})
 
   return (
     <Container>
